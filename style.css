@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 100;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background: rgb(160, 221, 225);
+  transition: all 0.5s ease;
+}
+
+.snare-pad {
+  background: rgb(225, 160, 211);
+  transition: all 0.5s ease;
+}
+
+.hihat-pad {
+  background: rgb(160, 225, 165);
+  transition: all 0.5s ease;
+}
+.kick-pad.active {
+  background: rgb(133, 183, 187);
+}
+.snare-pad.active {
+  background: rgb(204, 148, 192);
+}
+.hihat-pad.active {
+  background: rgb(137, 190, 141);
+}
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hihat-track,
+.snare-track,
+.kick-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  align-items: center;
+  margin: 0 2rem;
+}
+.mute {
+  margin-left: 2rem;
+}
+
+.controls button {
+  padding: 1rem;
+  background: rgb(85, 85, 85);
+  border: none;
+  color: white;
+  transition: all 0.5s ease;
+}
+.pad {
+  transition: all 0.4s ease;
+}
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background: rgb(85, 85, 85);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+.mute.active {
+  background-color: rgb(139, 139, 139);
+}
+
+.tempo {
+  width: 30%;
+  margin: 3rem;
+}
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0;
+  width: 100%;
+  position: relative;
+  background-color: #333;
+  border-radius: 1rem;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
